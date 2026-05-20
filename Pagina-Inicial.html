@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerd Costumes - Página Inicial</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+
+        }
+
+
+        .top-bar {
+            background: #4b0082;
+            width: 99%;
+            padding: 15px;
+
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            display: flex;
+
+            position: fixed;
+            left: 0;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .menu-btn {
+            width: 20px;
+            cursor: pointer;
+        }
+
+
+        .menu-btn span {
+            display: block;
+            height: 2px;
+            background: white;
+            margin: 4px 0;
+            border-radius: 3px;
+        }
+
+        .profile-btn {
+            cursor: pointer;
+        }
+
+        img {
+            padding: 5px;
+            width: 40px;
+
+        }
+
+        /* Esconde checkbox */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+
+            width: 250px;
+            height: 100vh;
+
+            background: #36005f;
+
+            padding-top: 80px;
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        /* Links da sidebar */
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+
+        .sidebar a:hover {
+            background: #4b0082;
+        }
+
+        /* Quando clicar no hamburguer */
+        #menu-toggle:checked~.sidebar {
+            left: 0;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4b0082;
+            color: white;
+            cursor: pointer;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #36005f;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle">
+
+    <div class="top-bar">
+
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="profile-btn">
+            <a href="Perfil.html">
+                <img src="perfil.png" alt="">
+            </a>
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+        <a href="Pagina-Inicial.html">Início</a>
+        <a href="#">Blog</a>
+        <a href="Login.html">Sair</a>
+    </div>
+</body>
+
+</html>
