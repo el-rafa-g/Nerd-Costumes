@@ -98,24 +98,60 @@
             left: 0;
         }
 
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            border: none;
+        .menu-sidebar {
+            position: fixed;
+            top: 0;
+            left: -2px;
+            border: #000000 solid 2px;
+
+            width: 248px;
+            height: 100vh;
+
+            background: #ffffff;
+
+            padding-top: 80px;
+            z-index: 998;
+            transition: 0.3s;
+        }
+
+        .search-box {
+            padding: 25px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 85%;
+            padding: 10px;
             border-radius: 5px;
-            background-color: #4b0082;
-            color: white;
+            border: 2px solid #100f0f;
+        }
+
+        .search-box .icon {
+            position: absolute;
+            right: 35px;
+            top: 48%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 16px;
+        }
+
+        .filtros {
+            padding: 25px;
+            position: relative;
+        }
+
+        .filtros button {
+            width: 95%;
+            font-size: large;
+            color: #000000;
+            padding: 10px 20px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            background-color: #995555;
             cursor: pointer;
         }
 
-        button a {
-            color: white;
-            text-decoration: none;
-        }
-
-        button:hover {
-            background-color: #36005f;
-        }
+        
     </style>
 </head>
 
@@ -142,6 +178,16 @@
         <a href="Pagina-Inicial.html">Início</a>
         <a href="#">Blog</a>
         <a href="Login.html">Sair</a>
+    </div>
+
+    <div class="menu-sidebar">
+        <div class="search-box">
+            <span class="icon">🔍</span>
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+        <div class="filtros">
+            <button>Filtros</button>
+        </div>
     </div>
 </body>
 
