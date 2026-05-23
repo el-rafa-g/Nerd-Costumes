@@ -36,6 +36,12 @@
             z-index: 1000;
         }
 
+        .top-bar img {
+            padding: 5px;
+            width: 40px;
+
+        }
+
         .menu-btn {
             width: 20px;
             cursor: pointer;
@@ -54,18 +60,10 @@
             cursor: pointer;
         }
 
-        img {
-            padding: 5px;
-            width: 40px;
-
-        }
-
-        /* Esconde checkbox */
         #menu-toggle {
             display: none;
         }
 
-        /* Barra lateral */
         .sidebar {
             position: fixed;
             top: 0;
@@ -81,7 +79,6 @@
             transition: 0.3s;
         }
 
-        /* Links da sidebar */
         .sidebar a {
             display: block;
             color: white;
@@ -93,7 +90,6 @@
             background: #4b0082;
         }
 
-        /* Quando clicar no hamburguer */
         #menu-toggle:checked~.sidebar {
             left: 0;
         }
@@ -135,23 +131,88 @@
             font-size: 16px;
         }
 
-        .filtros {
+        .filters {
             padding: 25px;
             position: relative;
         }
 
-        .filtros button {
+        .filter-btn {
             width: 95%;
-            font-size: large;
+            font-size: 22px;
             color: #000000;
             padding: 10px 20px;
             border: 2px solid #000000;
             border-radius: 5px;
-            background-color: #995555;
+            background-color: #ffffff;
             cursor: pointer;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-sizing: border-box;
         }
 
-        
+        .filter-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .filter-btn img {
+            width: 20px;
+            transition: 0.3s;
+            padding: 5px 5px;
+        }
+
+        .filter-btn .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .filters-content {
+            width: 95%;
+            margin-top: 10px;
+
+            border: 2px solid #000000;
+            border-radius: 5px;
+
+            background: white;
+
+            max-height: 0;
+            overflow: hidden;
+
+            transition: 0.3s;
+
+            box-sizing: border-box;
+        }
+
+        .filters-content a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .filters-content a:last-child {
+            border-bottom: none;
+        }
+
+        .filters-content a:hover {
+            background: #f0f0f0;
+        }
+
+        #filters-toggle {
+            display: none;
+        }
+
+        #filters-toggle:checked~.filters-content {
+            max-height: 300px;
+        }
+
+        #filters-toggle:checked+.filter-btn img {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 
@@ -180,15 +241,36 @@
         <a href="Login.html">Sair</a>
     </div>
 
+
     <div class="menu-sidebar">
         <div class="search-box">
             <span class="icon">🔍</span>
             <input type="text" placeholder="Pesquisar...">
         </div>
-        <div class="filtros">
-            <button>Filtros</button>
+
+        <div class="filters">
+
+            <input type="checkbox" id="filters-toggle">
+
+            <label for="filters-toggle" class="filter-btn">
+
+                <span class="filter-text">Filtros</span>
+
+                <span class="icon">
+                    <img src="Seta-baixo.png" alt="">
+                </span>
+
+            </label>
+
+            <div class="filters-content">
+                <a href="#">Categoria 1</a>
+                <a href="#">Categoria 2</a>
+                <a href="#">Categoria 3</a>
+            </div>
+
         </div>
     </div>
+
 </body>
 
 </html>
