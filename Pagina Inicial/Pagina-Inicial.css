@@ -268,10 +268,29 @@ body {
     padding: 20px;
 
     color: rgb(125, 14, 129);
+    
+    align-items: center;
+    gap: 20px;
 }
 
-.top-news img {
-    margin-top: 0;
-    padding: 0;
-    width: 100px;
+.news-title h2 {
+    margin-bottom: 15px;
+}
+
+.news-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.news-content img {
+    width: 220px;
+    height: auto;
+    flex-shrink: 0;
+    position: relative;
+    top: -50px; 
+}
+
+.news-content p {
+    margin: 0;
 }
