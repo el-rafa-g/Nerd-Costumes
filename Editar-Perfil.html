@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerd Costumes - Editar Perfil</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .profile-container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .formulario {
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            margin: 10px auto 30px auto;
+            padding: 15px;
+            border: 2px solid #222;
+            border-radius: 8px;
+            background: #f4f4f4;
+            text-align: left;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4b0082;
+            color: white;
+            cursor: pointer;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #36005f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <div class="formulario">
+
+            <h1>O que deseja editar do seu perfil?</h1>
+
+            <img src="perfil.png" alt="Foto de Perfil">
+
+            <br>
+
+            <label for="name">Ghosth</label><br>
+            <input type="name" name="email" id="name" placeholder="Ghosth">
+
+            <br>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="email" id="email" placeholder="galdinorafael63@gmail.com">
+
+
+            <div class="buttons">
+                <button>
+                    <a href="Perfil.html">Cancelar</a>
+                </button>
+
+                <button>
+                    <a href="Perfil.html">Concluir</a>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
